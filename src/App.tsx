@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ROUTES from './app/routes';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+const tempComp: React.FC = () => {
+  return(
+    <h1>Temp Component</h1>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route path={ROUTES.homeRoute()} component={tempComp}/>
+          <Route path={ROUTES.shopRoute()} component={tempComp} />
+          <Route path={ROUTES.aboutUsRoute()} component={tempComp} />
+          <Route path={ROUTES.blogsRoute()} component={tempComp} />
+        </Switch>
+      </Router>
     </div>
   );
 }
