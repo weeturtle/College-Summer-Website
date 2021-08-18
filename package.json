@@ -11,11 +11,15 @@
     "@types/node": "^12.20.19",
     "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
+    "bootstrap": "^5.1.0",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.5",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-swipeable": "^6.2.0",
+    "styled-components": "^5.3.0",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
   },
@@ -44,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.8"
+    "@iconify/react": "^3.0.1",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/styled-components": "^5.1.12"
   }
 }

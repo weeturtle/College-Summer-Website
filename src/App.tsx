@@ -6,11 +6,13 @@ import { ShopPage } from './pages/Shop/shopPage';
 import { AboutPage } from './pages/About/aboutPage';
 import { BlogPage } from './pages/Blog/blogPage';
 import { ErrorPage } from './pages/Error/errorPage';
+import { Header } from './Features/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
           <Route exact path='/'>
             <Redirect to={ROUTES.homeRoute()} />
