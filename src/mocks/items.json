@@ -1,6 +1,61 @@
 {
-    "items":  {
-        "1": {
+    "items":  [
+        {
+            "name": "El Carmen",
+            "id": 1,
+            "description": "Grown in the Pitalito, Huila District, this astonishing singe origin bean has notes of caramel, chocolate and red fruits. The medium dark roast creates a strong but not overwhelming flavour great with and without milk.",
+            "image": "",
+            "rating": 4.0,
+            "comments": [],
+            "location": "Colombia",
+            "inStock": true,
+            "quantities": [
+                {
+                    "quantity": 150,
+                    "inStock": true,
+                    "price": 7.99
+                },
+                {
+                    "quantity": 250,
+                    "inStock": true,
+                    "price": 11.99
+                },
+                {
+                    "quantity": 500,
+                    "inStock": true,
+                    "price": 19.99
+                }
+            ]
+        },
+        {
+            "name": "Hermosa",
+            "id": 2,
+            "description": "From the western province of Tarrazu, this single origin coffee has a thick body served best without milk. With subtle hints of malt and cocoa, the strong honeycomb makes the signature flavour. ",
+            "image": "",
+            "rating": 4.2,
+            "comments": [],
+            "location": "Costa Rica",
+            "inStock": true,
+            "quantities": [
+                {
+                    "quantity": 150,
+                    "inStock": true,
+                    "price": 8.50
+                },
+                {
+                    "quantity": 250,
+                    "inStock": true,
+                    "price": 12.99
+                },
+                {
+                    "quantity": 500,
+                    "inStock": true,
+                    "price": 19.99
+                }
+            ]
+            
+        },
+        {
             "name": "",
             "id": 0,
             "description": "",
@@ -8,17 +63,35 @@
             "rating": 0,
             "comments": [],
             "location": "",
+            "inStock": true,
             "quantities": []
         },
-        "2": {
-            "name": "",
-            "id": 0,
-            "description": "",
+        {
+            "name": "Blue Mountain",
+            "id": 3,
+            "description": "One of the world’s most reputed and rarest beans, this single origin boasts layers of tastes due to its light roast. Promoting a gentle base layer of herbs and spices with a stronger honeyed fruit body.",
             "image": "",
-            "rating": 0,
+            "rating": 4.9,
             "comments": [],
-            "location": "",
-            "quantities": []
+            "location": "Jamaica",
+            "inStock": true,
+            "quantities": [
+                {
+                    "quantity": 150,
+                    "inStock": true,
+                    "price": 14.99
+                },
+                {
+                    "quantity": 250,
+                    "inStock": true,
+                    "price": 24.99
+                },
+                {
+                    "quantity": 500,
+                    "inStock": true,
+                    "price": 49.99
+                }
+            ]
         }
-    }
+    ]
 }
