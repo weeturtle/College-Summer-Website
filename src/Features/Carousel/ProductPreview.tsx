@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { AddToCartDropDown } from "../../components/AddToCartDropDown";
+import { ItemMain } from "../Item/ItemMain";
+import { selectItems } from "../Item/itemSlice";
+// import { AddToCartDropDown } from "../../components/AddToCartDropDown";
 
 const PreviewWrapper = styled.div`
 width: 100%;
@@ -8,14 +11,11 @@ background-color: #FAEAD3;
 `
 
 export const ProductPreview: React.FC = () => {
+    const items = useSelector(selectItems);
+
     return (
         <PreviewWrapper>
-            <h2>Product Preview</h2>
-            <AddToCartDropDown options={[
-                {name: "150g", price: 4.99, inStock: true},
-                {name: "250g", price: 5.99, inStock: true},
-                {name: "500g", price: 9.99, inStock: true}
-            ]} />
+            <ItemMain item={items[1]} />
         </PreviewWrapper>
     )
 }

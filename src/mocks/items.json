@@ -9,6 +9,8 @@
             "comments": [],
             "location": "Colombia",
             "inStock": true,
+            "notes": ["caramel", "chocolate", "red fruits"],
+            "roast": "dark",
             "sizes": [
                 {
                     "size": 150,
@@ -36,6 +38,8 @@
             "comments": [],
             "location": "Costa Rica",
             "inStock": true,
+            "notes": ["malt", "cocoa", "honeycomb"],
+            "roast": "light",
             "sizes": [
                 {
                     "size": 150,
@@ -64,6 +68,8 @@
             "comments": [],
             "location": "",
             "inStock": true,
+            "notes": [],
+            "roast": "",
             "sizes": []
         },
         "1" : {
@@ -75,6 +81,8 @@
             "comments": [],
             "location": "Jamaica",
             "inStock": true,
+            "notes": ["herbs", "spices", "honeyed fruit"],
+            "roast": "medium",
             "sizes": [
                 {
                     "size": 150,

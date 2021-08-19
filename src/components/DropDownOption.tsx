@@ -18,7 +18,7 @@ padding-left: 0.8rem;
 }
 `
 
-const Name = styled.p`
+const Size = styled.p`
 
 `
 
@@ -27,15 +27,19 @@ text-align: right;
 `
 
 interface props {
-    name: string;
+    size: number;
     price: number;
     inStock?: boolean;
+    onClick: (size: number) => void;
 }
 
-export const CartDropOption: React.FC<props> = ({name, price, inStock=true}) => {
+export const CartDropOption: React.FC<props> = ({size, price, onClick, inStock=true}) => {
+    const handleClick = () => {
+        onClick(size);
+    }
     return (
-        <Option>
-            <Name>{name}</Name>
+        <Option onClick={handleClick}>
+            <Size>{size}g</Size>
             <Price>£{price}</Price>
         </Option>
     )

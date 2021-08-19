@@ -22,8 +22,9 @@ export const basketSlice: Slice = createSlice({
     reducers: {
         addBasketItem: (state, action: PayloadAction<Item>) => {
             const {id, size} = action.payload;
-            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
-            
+            const index = state.basket.findIndex((item: basketItem) => (item.id === id && item.size === size));
+
+
             if (index === -1) {
                 state.basket.push({...action.payload, quantity: 1});
             } else {
@@ -50,5 +51,7 @@ export const basketSlice: Slice = createSlice({
 })
 
 export const selectBasket = (state: RootState) => state.basket.basket;
+
+export const { addBasketItem, increaseQuantity, decreaseQuantity } = basketSlice.actions;
 
 export default basketSlice.reducer;

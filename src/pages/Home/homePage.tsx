@@ -6,7 +6,6 @@ const HomeWrapper = styled.div`
 position: relative;
 top: 5rem;
 background-color: #FAEAD3
-
 `
 
 export const HomePage: React.FC = () => {

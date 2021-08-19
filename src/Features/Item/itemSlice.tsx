@@ -16,12 +16,14 @@ interface size {
 export interface item {
     name: string;
     id: number;
-    desctiption: string;
+    description: string;
     image: string;
     rating: number;
     comments: comment[];
     location: string;
     sizes: size[];
+    notes: string[];
+    roast: string;
 }
 
 const itemsInitialState: {

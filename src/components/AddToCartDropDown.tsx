@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Icon } from '@iconify/react';
 import { useState } from "react";
 import { CartDropOption } from "./DropDownOption";
+import { useDispatch } from "react-redux";
+import { addBasketItem } from "../Features/Basket/basketSlice";
+import { item } from "../Features/Item/itemSlice";
 
 const ButtonWrapper = styled.div`
 background-color: #607D47;
@@ -31,18 +34,21 @@ const DropOptions = styled.div`
 `
 
 interface props {
-    options: option[];
+    item: item;
 }
 
-interface option {
-    name: string;
-    price: number;
-    inStock?: boolean;
-}
+export const AddToCartDropDown: React.FC<props> = ({item}) => {
+    const dispatch = useDispatch();
 
-export const AddToCartDropDown: React.FC<props> = ({options}) => {
     const [dropped, setDropped] = useState(true);
 
+    const handleAddClick = (size: number) => {
+        dispatch(addBasketItem({
+            name: item.name,
+            id: item.id,
+            size
+        }))
+    }
 
     const handleDropClick = () => {
         setDropped(dropped ? false : true);
@@ -59,11 +65,12 @@ export const AddToCartDropDown: React.FC<props> = ({options}) => {
             </ButtonContainer>
             <DropOptions>
                 {
-                    !dropped && options.map((option) => <CartDropOption
-                    name={option.name}
-                    price={option.price}
-                    inStock={option.inStock}
-                    key={option.name}
+                    !dropped && item.sizes.map((size) => <CartDropOption
+                    size={size.size}
+                    price={size.price}
+                    inStock={size.inStock}
+                    key={size.size}
+                    onClick={handleAddClick}
                     />)
                 }
             </DropOptions>
