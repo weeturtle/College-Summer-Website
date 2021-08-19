@@ -28,7 +28,7 @@ width: 5%;
 margin: 0 auto;
 `
 
-export const Carousel: React.FC<props> = ({ slides, interval = 5000}) => {
+export const Carousel: React.FC<props> = ({ slides, interval = 1000000}) => {
     const [current, setCurrent] = React.useState(0);
     const length = slides.length;
 
@@ -39,7 +39,7 @@ export const Carousel: React.FC<props> = ({ slides, interval = 5000}) => {
     const prevSlide = (): void => {
         setCurrent(current === 0 ? length -1 : current - 1);
     }
-  
+
     const handlers = useSwipeable({
         onSwipedLeft(e) {   
             nextSlide();
