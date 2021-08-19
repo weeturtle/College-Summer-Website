@@ -29,8 +29,23 @@ export const basketSlice: Slice = createSlice({
             } else {
                 state.basket[index].quantity += 1;
             }
+        },
+        increaseQuantity: (state, action: PayloadAction<Item>) => {
+            const {id, size} = action.payload;
+            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
+
+            state.basket[index].quantity += 1;
+        },
+        decreaseQuantity: (state, action: PayloadAction<Item>) => {
+            const {id, size} = action.payload;
+            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
+
+            if (state.basket[index].quantity === 1) {
+                state.basket.pop(index);
+            } else {
+                state.basket[index].quantity += 1;
+            }
         }
-        
     }
 })
 
