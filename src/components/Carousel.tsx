@@ -65,7 +65,7 @@ export const Carousel: React.FC<props> = ({ slides, interval = 1000000}) => {
                 {
                     slides.map((Slide, id) => {
                         if (id === current){
-                            return <Slide />
+                            return <Slide key={id}/>
                         }
                         return ''
                     })
@@ -78,6 +78,7 @@ export const Carousel: React.FC<props> = ({ slides, interval = 1000000}) => {
                         value={index}
                         selected={index === current}
                         onClick={(e) => setCurrent(e)}
+                        key={index}
                     /> 
                     })
                 }

@@ -50,6 +50,10 @@
   "devDependencies": {
     "@iconify/react": "^3.0.1",
     "@types/react-router-dom": "^5.1.8",
-    "@types/styled-components": "^5.1.12"
+    "@types/styled-components": "^5.1.12",
+    "msw": "^0.34.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

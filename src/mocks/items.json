@@ -1,0 +1,24 @@
+{
+    "items":  {
+        "1": {
+            "name": "",
+            "id": 0,
+            "description": "",
+            "image": "",
+            "rating": 0,
+            "comments": [],
+            "location": "",
+            "quantities": []
+        },
+        "2": {
+            "name": "",
+            "id": 0,
+            "description": "",
+            "image": "",
+            "rating": 0,
+            "comments": [],
+            "location": "",
+            "quantities": []
+        }
+    }
+}

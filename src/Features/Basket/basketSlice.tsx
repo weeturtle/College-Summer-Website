@@ -16,7 +16,7 @@ interface quantity {
 interface item {
     name: string;
     id: number;
-    quantity: number;
+    quantity: quantity[];
     desctiption: string;
     image: string;
     rating: number;
@@ -31,6 +31,9 @@ export const basketSlice: Slice = createSlice({
     name: "basket",
     initialState,
     reducers: {
+        addItem: (state, action) => {
+
+        }
         
     }
 })
