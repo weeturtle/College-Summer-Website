@@ -7,8 +7,8 @@ interface comment {
     approved: boolean;
 }
 
-interface quantity {
-    quantity: number;
+interface size {
+    size: number;
     inStock: boolean;
     price: number;
 }
@@ -16,13 +16,12 @@ interface quantity {
 export interface item {
     name: string;
     id: number;
-    quantity: quantity[];
     desctiption: string;
     image: string;
     rating: number;
     comments: comment[];
     location: string;
-    quantities: quantity[];
+    sizes: size[];
 }
 
 const itemsInitialState: {

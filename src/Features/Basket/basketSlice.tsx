@@ -1,18 +1,34 @@
-import { createSlice, Slice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { item } from "../Item/itemSlice";
 
 
-const initialState: {items: item[]} = {
-    items: []
+const initialState: {basket: basketItem[]} = {
+    basket: []
 };
+
+interface basketItem extends Item {
+    quantity: number;
+}
+
+interface Item {
+    name: string;
+    id: number;
+    size: number;
+}
 
 export const basketSlice: Slice = createSlice({
     name: "basket",
     initialState,
     reducers: {
-        addItem: (state, action) => {
-
+        addBasketItem: (state, action: PayloadAction<Item>) => {
+            const {id, size} = action.payload;
+            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
+            
+            if (index === -1) {
+                state.basket.push({...action.payload, quantity: 1});
+            } else {
+                state.basket[index].quantity += 1;
+            }
         }
         
     }
