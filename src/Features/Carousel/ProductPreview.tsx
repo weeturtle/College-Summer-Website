@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { AddToCart } from "../../components/AddToCart";
 import { AddToCartDropDown } from "../../components/AddToCartDropDown";
 
 const PreviewWrapper = styled.div`
@@ -12,8 +11,11 @@ export const ProductPreview: React.FC = () => {
     return (
         <PreviewWrapper>
             <h2>Product Preview</h2>
-            <AddToCartDropDown options={[]} />
-            <AddToCart />
+            <AddToCartDropDown options={[
+                {name: "150g", price: 4.99, inStock: true},
+                {name: "250g", price: 5.99, inStock: true},
+                {name: "500g", price: 9.99, inStock: true}
+            ]} />
         </PreviewWrapper>
     )
 }
