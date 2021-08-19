@@ -1,31 +1,11 @@
 import { createSlice, Slice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
+import { item } from "../Item/itemSlice";
 
-interface comment {
-    author: string;
-    comment: string;
-    approved: boolean;
-}
 
-interface quantity {
-    quantity: number;
-    inStock: boolean;
-    price: number;
-}
-
-interface item {
-    name: string;
-    id: number;
-    quantity: quantity[];
-    desctiption: string;
-    image: string;
-    rating: number;
-    comments: comment[];
-    location: string;
-    quantities: quantity[];
-}
-
-const initialState: item[] = [];
+const initialState: {items: item[]} = {
+    items: []
+};
 
 export const basketSlice: Slice = createSlice({
     name: "basket",

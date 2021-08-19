@@ -63,6 +63,7 @@ export const AddToCartDropDown: React.FC<props> = ({options}) => {
                     name={option.name}
                     price={option.price}
                     inStock={option.inStock}
+                    key={option.name}
                     />)
                 }
             </DropOptions>

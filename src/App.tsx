@@ -7,8 +7,18 @@ import { AboutPage } from './pages/About/aboutPage';
 import { BlogPage } from './pages/Blog/blogPage';
 import { ErrorPage } from './pages/Error/errorPage';
 import { Header } from './Features/Header/Header';
+import { useDispatch } from 'react-redux';
+import { fetchItems } from './Features/Item/itemSlice';
+import { useEffect } from 'react';
 
 function App() {
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    dispatch(fetchItems())
+  }, [dispatch])
+
   return (
     <div className="App">
       <Router>

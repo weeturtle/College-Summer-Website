@@ -5,9 +5,7 @@ export const handlers = [
     rest.get('/getItems', (req, res, ctx) => {
         return res(
             ctx.status(200),
-            ctx.json({
-                items
-            })
+            ctx.json(items)
         )
     })
 ]

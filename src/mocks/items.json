@@ -2,7 +2,7 @@
     "items":  [
         {
             "name": "El Carmen",
-            "id": 1,
+            "id": 50,
             "description": "Grown in the Pitalito, Huila District, this astonishing singe origin bean has notes of caramel, chocolate and red fruits. The medium dark roast creates a strong but not overwhelming flavour great with and without milk.",
             "image": "",
             "rating": 4.0,
@@ -29,7 +29,7 @@
         },
         {
             "name": "Hermosa",
-            "id": 2,
+            "id": 117,
             "description": "From the western province of Tarrazu, this single origin coffee has a thick body served best without milk. With subtle hints of malt and cocoa, the strong honeycomb makes the signature flavour. ",
             "image": "",
             "rating": 4.2,
@@ -68,7 +68,7 @@
         },
         {
             "name": "Blue Mountain",
-            "id": 3,
+            "id": 1,
             "description": "One of the world’s most reputed and rarest beans, this single origin boasts layers of tastes due to its light roast. Promoting a gentle base layer of herbs and spices with a stronger honeyed fruit body.",
             "image": "",
             "rating": 4.9,
