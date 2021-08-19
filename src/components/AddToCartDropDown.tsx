@@ -41,7 +41,7 @@ interface option {
 }
 
 export const AddToCartDropDown: React.FC<props> = ({options}) => {
-    const [dropped, setDropped] = useState(false);
+    const [dropped, setDropped] = useState(true);
 
 
     const handleDropClick = () => {
