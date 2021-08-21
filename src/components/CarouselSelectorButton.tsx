@@ -13,6 +13,7 @@ border: none;
 border-radius: 100%;
 height: 0.75rem;
 width: 0.75rem;
+z-index: 10;
 `
 
 

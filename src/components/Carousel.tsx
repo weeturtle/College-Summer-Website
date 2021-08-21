@@ -13,6 +13,7 @@ interface props {
 const CarouselContainer = styled.div`
 width: 100%;
 height: 100%;
+z-index: 14;
 `
 
 const SlideContainer = styled.div`
