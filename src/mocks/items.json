@@ -1,6 +1,6 @@
 {
-    "items":  {
-        "50" : {
+    "items": {
+        "50": {
             "name": "El Carmen",
             "id": 50,
             "description": "Grown in the Pitalito, Huila District, this astonishing singe origin bean has notes of caramel, chocolate and red fruits. The medium dark roast creates a strong but not overwhelming flavour great with and without milk.",
@@ -9,7 +9,11 @@
             "comments": [],
             "location": "Colombia",
             "inStock": true,
-            "notes": ["caramel", "chocolate", "red fruits"],
+            "notes": [
+                "caramel",
+                "chocolate",
+                "red fruits"
+            ],
             "roast": "dark",
             "sizes": [
                 {
@@ -29,7 +33,7 @@
                 }
             ]
         },
-        "117" : {
+        "117": {
             "name": "Hermosa",
             "id": 117,
             "description": "From the western province of Tarrazu, this single origin coffee has a thick body served best without milk. With subtle hints of malt and cocoa, the strong honeycomb makes the signature flavour. ",
@@ -38,7 +42,11 @@
             "comments": [],
             "location": "Costa Rica",
             "inStock": true,
-            "notes": ["malt", "cocoa", "honeycomb"],
+            "notes": [
+                "malt",
+                "cocoa",
+                "honeycomb"
+            ],
             "roast": "light",
             "sizes": [
                 {
@@ -57,22 +65,91 @@
                     "price": 19.99
                 }
             ]
-            
         },
-        "" : {
-            "name": "",
-            "id": 0,
-            "description": "",
+        "87": {
+            "name": "Karimikui",
+            "id": 87,
+            "description": "Although many people won't have tried a bean like this before, it's strong sweet body gives its recognisable taste. The sweetness has light notes of chocolate and mango with a strong blueberry aftertaste.",
             "image": "Temp.png",
-            "rating": 0,
+            "rating": 3.8,
             "comments": [],
-            "location": "",
+            "location": "Kenya",
             "inStock": true,
-            "notes": [],
+            "notes": [
+                "milk chocolate",
+                "black current",
+                "caramel"
+            ],
             "roast": "",
             "sizes": []
         },
-        "1" : {
+        "23": {
+            "name": "El Diamante",
+            "id": 23,
+            "description": "A brilliant decaffeinated single origin bean offering a smooth but exciting taste indifferentiable from a caffeinated coffee. It has notes of dark chocolate, toffee and peach with a sweet mouthfeel.",
+            "image": "Temp.png",
+            "rating": "3.9",
+            "comments": [],
+            "location": "Colombia",
+            "inStock": true,
+            "notes": [
+                "dark chocolate",
+                "toffee",
+                "peach"
+            ],
+            "roast": "light",
+            "sizes": [
+                {
+                    "size": 150,
+                    "inStock": true,
+                    "price": 7.55
+                },
+                {
+                    "size": 250,
+                    "inStock": true,
+                    "price": 8.95
+                },
+                {
+                    "size": 500,
+                    "inStock": true,
+                    "price": 14.95
+                }
+            ]
+        },
+        "15": {
+            "name": "Serra Nova",
+            "id": 15,
+            "description": "The perfect late afternoon coffee with a warming walnut and orange taste. This single origin works brilliantly with a touch of milk and will give you the energy you need for some evening work.",
+            "image": "Temp.png",
+            "rating": "4.3",
+            "comments": [],
+            "location": "Brazil",
+            "inStock": true,
+            "notes": [
+                "walnut",
+                "orange",
+                "chocolate"
+            ],
+            "roast": "Medium",
+            "sizes": [
+                {
+                    "size": 150,
+                    "inStock": true,
+                    "price": 8.05
+                },
+                {
+                    "size": 250,
+                    "inStock": true,
+                    "price": 9.95
+                },
+                {
+                    "size": 500,
+                    "inStock": true,
+                    "price": 16.95
+                }
+            ]
+        },
+        "1": {
             "name": "Blue Mountain",
             "id": 1,
             "description": "One of the world’s most reputed and rarest beans, this single origin boasts layers of tastes due to its light roast. Promoting a gentle base layer of herbs and spices with a stronger honeyed fruit body.",
@@ -81,7 +158,11 @@
             "comments": [],
             "location": "Jamaica",
             "inStock": true,
-            "notes": ["herbs", "spices", "honeyed fruit"],
+            "notes": [
+                "herbs",
+                "spices",
+                "honeyed fruit"
+            ],
             "roast": "medium",
             "sizes": [
                 {
@@ -98,6 +179,39 @@
                     "size": 500,
                     "inStock": true,
                     "price": 49.99
+                }
+            ]
+        },
+        "119": {
+            "name": "Gran Fondo",
+            "id": 119,
+            "description": "A rich, full bodied blend of Rwanda and Colombia's beans have strong raisin and dark chocolate notes with a creamy aftertaste. This sweet and punchy blend is the perfect evening pick-me-up.",
+            "image": "Temp.png",
+            "rating": "4.0",
+            "comments": [],
+            "location": "Rwanda",
+            "inStock": true,
+            "notes": [
+                "raisin",
+                "dark chocolate",
+                "berry"
+            ],
+            "roast": "dark",
+            "sizes": [
+                {
+                    "size": 150,
+                    "inStock": true,
+                    "price": 10.65
+                },
+                {
+                    "size": 250,
+                    "inStock": true,
+                    "price": 12.95
+                },
+                {
+                    "size": 500,
+                    "inStock": true,
+                    "price": 22.95
                 }
             ]
         }
