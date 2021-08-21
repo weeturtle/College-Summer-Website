@@ -6,10 +6,11 @@ import ROUTES from '../../app/routes';
 const HeaderWrapper = styled.div`
 position: fixed;
 width: 100%;
-height: 5rem;
+height: 4.5rem;
 left: 0px;
 top: 0px;
 background: #F9EAD0;
+z-index: 100;
 `
 
 const HeaderContainer = styled.div`

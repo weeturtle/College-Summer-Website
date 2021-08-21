@@ -52,7 +52,3 @@ a:hover,
 a:visited {
     color: initial;
 }
-
-img {
-    filter: grayscale(1) invert(1);
-}

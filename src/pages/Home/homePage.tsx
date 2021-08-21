@@ -4,7 +4,7 @@ import SLIDES from "../../Features/Carousel/Slides";
 
 const HomeWrapper = styled.div`
 position: relative;
-top: 5rem;
+top: 4.5rem;
 background-color: #FAEAD3
 `
 
