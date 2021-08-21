@@ -45,7 +45,7 @@ align-items: center;
 `
 
 const IndividualStat = styled.div`
-text-transform:capitalize;
+text-transform: capitalize;
 `
 
 const StatHeader = styled.h4`
@@ -80,9 +80,10 @@ const CartSection = styled.div`
 display: flex;
 width: 100%;
 justify-content: space-between;
-align-items: center;
+align-items: flex-start;
+z-index: 3;
 position: absolute;
-bottom: 0;
+top: 20rem;
 `
 
 interface props {
