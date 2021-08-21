@@ -1,18 +1,27 @@
 import { item } from "./itemSlice";
 import styled from "styled-components";
 import { AddToCartDropDown } from "../../components/AddToCartDropDown";
+import { DetailsButton } from "../../components/DetailsButton";
 
 const ProductMainWrapper = styled.div`
 
 `
 
 const ProductInformation = styled.div`
+width: 30%;
+height: 62.5%;
+min-height: 25rem;
 `
 
 // const ProductImage = styled.image`
 // `
 
 const ProductStats = styled.div`
+background-color: #FFF3E1;
+height: 10rem;
+width: 100%;
+position: absolute;
+bottom: 0;
 `
 
 const ProductTitle = styled.h2`
@@ -31,7 +40,10 @@ color: #535353;
 `
 
 const CartSection = styled.div`
-
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
 `
 
 interface props {
@@ -51,6 +63,7 @@ export const ItemMain: React.FC<props> = ({item}) => {
                 <ProductDescription>{item.description}</ProductDescription>
                 <CartSection>
                     <AddToCartDropDown item={item}/>
+                    <DetailsButton itemId={item.id}/>
                 </CartSection>
             </ProductInformation>
             <ProductStats>
