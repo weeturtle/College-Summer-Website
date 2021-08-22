@@ -14,6 +14,7 @@ const CarouselContainer = styled.div`
 width: 100%;
 height: 100%;
 z-index: 14;
+position: relative;
 `
 
 const SlideContainer = styled.div`
@@ -26,7 +27,9 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 width: 5%;
-margin: 0 auto;
+position: absolute;
+bottom: 0;
+left: 47.5%;
 `
 
 export const Carousel: React.FC<props> = ({ slides, interval = 1000000}) => {

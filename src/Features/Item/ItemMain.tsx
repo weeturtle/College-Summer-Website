@@ -4,7 +4,7 @@ import { AddToCartDropDown } from "../../components/AddToCartDropDown";
 import { DetailsButton } from "../../components/DetailsButton";
 
 const ProductMainWrapper = styled.div`
-
+width: 100%;
 `
 
 const ProductInformation = styled.div`

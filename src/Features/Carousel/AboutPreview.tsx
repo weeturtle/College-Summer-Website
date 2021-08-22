@@ -50,6 +50,9 @@ align-items: center;
 flex-direction: column;
 width: 17.5%;
 gap: 5rem;
+background: #f1dbbd;
+padding: 2rem 0;
+border-radius: 1.25rem;
 `
 
 const FairTradeImage = styled.img`
