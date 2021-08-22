@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Carousel } from "../../components/Carousel";
 import SLIDES from "../../Features/Carousel/Slides";
 import { AboutSection } from "./AboutSection";
+import { ProductSection } from "./ProductSection";
 
 const HomeWrapper = styled.div`
 position: relative;
@@ -21,6 +22,7 @@ export const HomePage: React.FC = () => {
                     <Carousel slides={SLIDES}/>
                 </CarouselWrapper>
                 <AboutSection />
+                <ProductSection />
             </HomeWrapper>
         </div>
     )

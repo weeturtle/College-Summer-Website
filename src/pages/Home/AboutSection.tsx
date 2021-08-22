@@ -3,6 +3,7 @@ import styled from "styled-components";
 const AboutSectionWrapper = styled.div`
 height: 25rem;
 width: 100%;
+background-color: #fff6e9;
 `
 
 const AboutHeader = styled.h2`

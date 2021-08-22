@@ -15,11 +15,14 @@ const ProductCardContainer = styled.div`
 padding: 2.5rem 0;
 `
 
-export const ShopItemList: React.FC = () => {
-    const items: item[] = useSelector(selectSearchItems);
-    
-    console.log(useSelector(selectSearchItems))
-    
+interface props {
+    preSelectItems?: item[];
+}
+
+export const ShopItemList: React.FC<props> = ({preSelectItems = []}) => {
+    const allItems: item[] = useSelector(selectSearchItems)
+    const items: item[] = preSelectItems.length === 0 ? allItems : preSelectItems;
+        
     return (
         <ItemListContainer>
             {
