@@ -1,29 +1,26 @@
 import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
+import { item } from "../Item/itemSlice";
 
 
-const initialState: {basket: basketItem[], isBasket: boolean} = {
+const initialState: {basket: BasketItem[], isBasket: boolean} = {
     basket: [],
     isBasket: true
 };
 
-interface basketItem extends Item {
-    quantity: number;
-}
 
-interface Item {
-    name: string;
-    id: number;
-    size: number;
+export interface BasketItem extends item {
+    sizeIndex: number;
+    quantity: number;
 }
 
 export const basketSlice: Slice = createSlice({
     name: "basket",
     initialState,
     reducers: {
-        addBasketItem: (state, action: PayloadAction<Item>) => {
-            const {id, size} = action.payload;
-            const index = state.basket.findIndex((item: basketItem) => (item.id === id && item.size === size));
+        addBasketItem: (state, action: PayloadAction<BasketItem>) => {
+            const {id, sizeIndex} = action.payload;
+            const index = state.basket.findIndex((item: BasketItem) => (item.id === id && item.sizeIndex === sizeIndex));
 
 
             if (index === -1) {
@@ -32,15 +29,15 @@ export const basketSlice: Slice = createSlice({
                 state.basket[index].quantity += 1;
             }
         },
-        increaseQuantity: (state, action: PayloadAction<Item>) => {
-            const {id, size} = action.payload;
-            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
+        increaseQuantity: (state, action: PayloadAction<BasketItem>) => {
+            const {id, sizeIndex} = action.payload;
+            const index = state.basket.indexOf((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
 
             state.basket[index].quantity += 1;
         },
-        decreaseQuantity: (state, action: PayloadAction<Item>) => {
-            const {id, size} = action.payload;
-            const index = state.basket.indexOf((item: basketItem) => item.id === id && item.size === size);
+        decreaseQuantity: (state, action: PayloadAction<BasketItem>) => {
+            const {id, sizeIndex} = action.payload;
+            const index = state.basket.indexOf((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
 
             if (state.basket[index].quantity === 1) {
                 state.basket.pop(index);

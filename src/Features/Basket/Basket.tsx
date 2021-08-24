@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { item } from "../Item/itemSlice";
 import { BasketItem } from "./BasketItem";
-import { selectBasket, toggleBasket } from "./basketSlice";
+import { BasketItem as item, selectBasket, toggleBasket } from "./basketSlice";
 
 const BasketContainer = styled.div`
 height: 100%;
@@ -45,11 +44,11 @@ export const Basket: React.FC = () => {
     return (
         <BasketContainer>
             <BasketHeader>
-                <BasketTitle></BasketTitle>
+                <BasketTitle>Shopping Cart</BasketTitle>
                 <CloseBasket onClick={handleToggleBasket}>Close</CloseBasket>
             </BasketHeader>
             <BasketItems>
-                {basketItems.map((item: item) => <BasketItem item={item} />)}
+                {basketItems.map((item: item, index: number) => <BasketItem item={item} key={index} />)}
             </BasketItems>
             <TotalSection>
 

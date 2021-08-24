@@ -42,11 +42,10 @@ export const AddToCartDropDown: React.FC<props> = ({item}) => {
 
     const [dropped, setDropped] = useState(true);
 
-    const handleAddClick = (size: number) => {
+    const handleAddClick = (sizeIndex: number) => {
         dispatch(addBasketItem({
-            name: item.name,
-            id: item.id,
-            size
+            ...item,
+            sizeIndex
         }))
     }
 
@@ -65,11 +64,12 @@ export const AddToCartDropDown: React.FC<props> = ({item}) => {
             </ButtonContainer>
             <DropOptions>
                 {
-                    !dropped && item.sizes.map((size) => <CartDropOption
+                    !dropped && item.sizes.map((size, index) => <CartDropOption
                     size={size.size}
                     price={size.price}
                     inStock={size.inStock}
                     key={size.size}
+                    sizeIndex={index}
                     onClick={handleAddClick}
                     />)
                 }

@@ -30,12 +30,13 @@ interface props {
     size: number;
     price: number;
     inStock?: boolean;
+    sizeIndex: number;
     onClick: (size: number) => void;
 }
 
-export const CartDropOption: React.FC<props> = ({size, price, onClick, inStock=true}) => {
+export const CartDropOption: React.FC<props> = ({size, price, sizeIndex, onClick, inStock=true}) => {
     const handleClick = () => {
-        onClick(size);
+        onClick(sizeIndex);
     }
     return (
         <Option onClick={handleClick}>

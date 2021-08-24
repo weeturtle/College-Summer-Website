@@ -1,7 +1,19 @@
 import styled from "styled-components";
-import { item } from "../Item/itemSlice";
+import { BasketItem as item } from "./basketSlice";
+
+const BasketItemWrapper = styled.div`
+`
 
 const BasketItemContainer = styled.div`
+`
+
+const ItemTitle = styled.h3`
+`
+
+const ItemSize = styled.h4`
+`
+
+const ItemPrice = styled.h4`
 `
 
 interface props {
@@ -9,9 +21,19 @@ interface props {
 }
 
 export const BasketItem: React.FC<props> = ({item}) => {
-    return (
-        <BasketItemContainer>
+    const sizeInfo = item.sizes[item.sizeIndex];
 
-        </BasketItemContainer>
+
+    const price = sizeInfo.price * item.quantity;
+
+    return (
+        <BasketItemWrapper>
+            <BasketItemContainer>
+                <ItemTitle>{item.name}</ItemTitle>
+                <ItemSize>{sizeInfo.size}g</ItemSize>
+                <ItemPrice>£{price}</ItemPrice>
+            </BasketItemContainer>
+
+        </BasketItemWrapper>
     )
 }

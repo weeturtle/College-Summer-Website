@@ -7,7 +7,7 @@ interface comment {
     approved: boolean;
 }
 
-interface size {
+export interface size {
     size: number;
     inStock: boolean;
     price: number;
