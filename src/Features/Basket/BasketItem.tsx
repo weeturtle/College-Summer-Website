@@ -23,7 +23,6 @@ interface props {
 export const BasketItem: React.FC<props> = ({item}) => {
     const sizeInfo = item.sizes[item.sizeIndex];
 
-
     const price = sizeInfo.price * item.quantity;
 
     return (
