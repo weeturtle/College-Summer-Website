@@ -5,7 +5,7 @@ import { item } from "../Item/itemSlice";
 
 const initialState: {basket: BasketItem[], isBasket: boolean} = {
     basket: [],
-    isBasket: true
+    isBasket: false
 };
 
 

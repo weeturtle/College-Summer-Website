@@ -121,7 +121,7 @@ export const BasketItem: React.FC<props> = ({item}) => {
                     <ItemQuantity>Quantity: {item.quantity}</ItemQuantity>
                     <AdjustQuantity onClick={() => handleAdjust("add")}>+</AdjustQuantity>
                 </QuantitySection>
-                <ItemPrice>£{price}</ItemPrice>
+                <ItemPrice>£{price.toFixed(2)}</ItemPrice>
             </BasketItemContainer>
 
         </BasketItemWrapper>

@@ -49,10 +49,31 @@ overflow-y: auto;
 height: 65%;
 `
 
-const TotalSection = styled.div`
+const BasketFooter = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
+const TotalSection = styled.div`
+font-size: 1.5rem;
+`
+
+const PriceSection = styled.span`
+font-size: 2rem;
+`
+
+
 const CheckOut = styled.button`
+background-color: #607D47;
+border: none;
+width: 50%;
+height: 3.5rem;
+font-size: 2rem;
+color: #FAEAD3;
+position: relative;
+top: 2rem;
 `
 
 export const Basket: React.FC = () => {
@@ -70,7 +91,7 @@ export const Basket: React.FC = () => {
             const sizeInfo = item.sizes[item.sizeIndex];
             total += sizeInfo.price * item.quantity;
         })
-        return total;
+        return total.toFixed(2);
     }
 
     return (
@@ -82,12 +103,14 @@ export const Basket: React.FC = () => {
             <BasketItems>
                 {basketItems.map((item: item, index: number) => <BasketItem item={item} key={index} />)}
             </BasketItems>
-            <TotalSection>
-                £{calculateTotal()}
-            </TotalSection>
-            <CheckOut>
-                Check Out
-            </CheckOut>
+            <BasketFooter>
+                <TotalSection>
+                    Order Total: <PriceSection>£{calculateTotal()}</PriceSection>
+                </TotalSection>
+                <CheckOut>
+                    Check Out
+                </CheckOut>
+            </BasketFooter>
         </BasketContainer>
     )
 }
