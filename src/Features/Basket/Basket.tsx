@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { BasketItem } from "./BasketItem";
 import { BasketItem as item, selectBasket, toggleBasket } from "./basketSlice";
+import { Icon } from '@iconify/react';
 
 const BasketContainer = styled.div`
 height: 100%;
@@ -15,12 +16,32 @@ z-index: 100;
 `
 
 const BasketHeader = styled.div`
+color: #3e3e3e;
+width: 100%;
+height: 3rem;
+background-color: #e2c69e;
 `
 
 const BasketTitle = styled.h3`
+font-size: 2rem;
+padding-left: 3%;
+padding-top: 2%;
 `
 
 const CloseBasket = styled.button`
+background-color: transparent;
+border: none;
+width: 1.5rem;
+height: 1.5rem;
+padding: 0;
+position: absolute;
+right: 3%;
+top: 1.4%;
+`
+
+const CloseBasketIcon = styled(Icon)`
+width: 100%;
+height: 100%;
 `
 
 const BasketItems = styled.div`
@@ -56,7 +77,7 @@ export const Basket: React.FC = () => {
         <BasketContainer>
             <BasketHeader>
                 <BasketTitle>Shopping Cart</BasketTitle>
-                <CloseBasket onClick={handleToggleBasket}>Close</CloseBasket>
+                <CloseBasket onClick={handleToggleBasket}><CloseBasketIcon icon="bi:x-lg" /></CloseBasket>
             </BasketHeader>
             <BasketItems>
                 {basketItems.map((item: item, index: number) => <BasketItem item={item} key={index} />)}
