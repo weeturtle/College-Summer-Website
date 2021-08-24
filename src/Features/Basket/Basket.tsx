@@ -41,6 +41,15 @@ export const Basket: React.FC = () => {
         dispatch(toggleBasket(false))
     }
     
+    const calculateTotal = () => {
+        let total = 0;
+        basketItems.forEach((item: item) => {
+            const sizeInfo = item.sizes[item.sizeIndex];
+            total += sizeInfo.price * item.quantity;
+        })
+        return total;
+    }
+
     return (
         <BasketContainer>
             <BasketHeader>
@@ -51,10 +60,10 @@ export const Basket: React.FC = () => {
                 {basketItems.map((item: item, index: number) => <BasketItem item={item} key={index} />)}
             </BasketItems>
             <TotalSection>
-
+                £{calculateTotal()}
             </TotalSection>
             <CheckOut>
-
+                Check Out
             </CheckOut>
         </BasketContainer>
     )
