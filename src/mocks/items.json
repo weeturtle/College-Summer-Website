@@ -81,7 +81,23 @@
                 "caramel"
             ],
             "roast": "",
-            "sizes": []
+            "sizes": [
+                {
+                    "size": 150,
+                    "inStock": true,
+                    "price": 8.50
+                },
+                {
+                    "size": 250,
+                    "inStock": true,
+                    "price": 12.99
+                },
+                {
+                    "size": 500,
+                    "inStock": true,
+                    "price": 19.99
+                }
+            ]
         },
         "23": {
             "name": "El Diamante",

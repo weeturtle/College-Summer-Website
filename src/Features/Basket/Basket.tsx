@@ -5,9 +5,9 @@ import { BasketItem as item, selectBasket, toggleBasket } from "./basketSlice";
 
 const BasketContainer = styled.div`
 height: 100%;
-min-height: 10rem;
 width: 20%;
-background-color: #ffffff;
+min-width: 15rem;
+background-color: #ead6b8;
 position: fixed;
 right: 0;
 top: 4.5rem;
@@ -24,6 +24,8 @@ const CloseBasket = styled.button`
 `
 
 const BasketItems = styled.div`
+overflow-y: auto;
+height: 65%;
 `
 
 const TotalSection = styled.div`

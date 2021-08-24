@@ -31,19 +31,25 @@ export const basketSlice: Slice = createSlice({
         },
         increaseQuantity: (state, action: PayloadAction<BasketItem>) => {
             const {id, sizeIndex} = action.payload;
-            const index = state.basket.indexOf((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
+            const index = state.basket.findIndex((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
 
             state.basket[index].quantity += 1;
         },
         decreaseQuantity: (state, action: PayloadAction<BasketItem>) => {
             const {id, sizeIndex} = action.payload;
-            const index = state.basket.indexOf((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
+            const index = state.basket.findIndex((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
 
             if (state.basket[index].quantity === 1) {
                 state.basket.pop(index);
             } else {
-                state.basket[index].quantity += 1;
+                state.basket[index].quantity -= 1;
             }
+        },
+        removeItem: (state, action: PayloadAction<BasketItem>) => {
+            const {id, sizeIndex} = action.payload;
+            const index = state.basket.findIndex((item: BasketItem) => item.id === id && item.sizeIndex === sizeIndex);
+
+            state.basket.pop(index);
         },
         toggleBasket: (state, action: PayloadAction<boolean>) => {
             state.isBasket = action.payload;
@@ -55,6 +61,6 @@ export const selectBasket = (state: RootState) => state.basket.basket;
 
 export const selectIsBasket = (state: RootState) => state.basket.isBasket;
 
-export const { addBasketItem, increaseQuantity, decreaseQuantity, toggleBasket } = basketSlice.actions;
+export const { addBasketItem, increaseQuantity, decreaseQuantity, toggleBasket, removeItem } = basketSlice.actions;
 
 export default basketSlice.reducer;
