@@ -2,8 +2,9 @@ import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
 
-const initialState: {basket: basketItem[]} = {
-    basket: []
+const initialState: {basket: basketItem[], isBasket: boolean} = {
+    basket: [],
+    isBasket: true
 };
 
 interface basketItem extends Item {
@@ -46,12 +47,17 @@ export const basketSlice: Slice = createSlice({
             } else {
                 state.basket[index].quantity += 1;
             }
+        },
+        toggleBasket: (state, action: PayloadAction<boolean>) => {
+            state.isBasket = action.payload;
         }
     }
 })
 
 export const selectBasket = (state: RootState) => state.basket.basket;
 
-export const { addBasketItem, increaseQuantity, decreaseQuantity } = basketSlice.actions;
+export const selectIsBasket = (state: RootState) => state.basket.isBasket;
+
+export const { addBasketItem, increaseQuantity, decreaseQuantity, toggleBasket } = basketSlice.actions;
 
 export default basketSlice.reducer;

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import ROUTES from '../../app/routes';
+import { selectIsBasket, toggleBasket } from '../Basket/basketSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const HeaderWrapper = styled.div`
 position: fixed;
@@ -51,7 +53,23 @@ height: 100%;
 width: 100%;
 `
 
+const BasketButton = styled.button`
+height: 100%;
+width: 100%;
+padding: 0;
+border: none;
+background-color: transparent;
+`
+
 export const Header: React.FC = () => {
+    const dispatch = useDispatch();
+
+    const isBasket = useSelector(selectIsBasket)
+
+    const handleToggleBasket = () => {
+        dispatch(toggleBasket(isBasket ? false : true))
+    }
+
     return (
         <HeaderWrapper>
             <HeaderContainer>
@@ -63,7 +81,9 @@ export const Header: React.FC = () => {
                     <Link to={ROUTES.blogsRoute()}>Blog</Link>
                 </NavContainer>
                 <IconsWrapper>
-                    <HeaderIcon icon="akar-icons:shopping-bag" />
+                    <BasketButton onClick={handleToggleBasket}>
+                        <HeaderIcon icon="akar-icons:shopping-bag" />
+                    </BasketButton>
                     <HeaderIcon icon="iconoir:profile-circled" />
                 </IconsWrapper>
             </HeaderContainer>
