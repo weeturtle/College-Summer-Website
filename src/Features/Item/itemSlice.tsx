@@ -65,6 +65,11 @@ export const itemsSlice: Slice = createSlice({
     }
 })
 
+export const selectItemById = (id: number) => (state: RootState) => {
+    const itemList: item[] = Object.values(state.items.items);
+    return itemList.filter((Item: item) => Item.id === id)[0];
+};
+
 export const selectItems = (state: RootState) => state.items.items;
 
 export default itemsSlice.reducer;

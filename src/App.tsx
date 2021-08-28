@@ -13,6 +13,7 @@ import { fetchItems } from './Features/Item/itemSlice';
 import { useEffect } from 'react';
 import { selectIsBasket } from './Features/Basket/basketSlice';
 import { Basket } from './Features/Basket/Basket';
+import { ProductPage } from './pages/ProductPage/ProductPage';
 
 const BasketSection = styled(Basket)`
 z-index: 5;
@@ -41,6 +42,7 @@ function App() {
           <Route path={ROUTES.shopRoute()} component={ShopPage} />
           <Route path={ROUTES.aboutUsRoute()} component={AboutPage} />
           <Route path={ROUTES.blogsRoute()} component={BlogPage} />
+          <Route path='/product/:id' component={ProductPage} />
           <Route component={ErrorPage} />
         </Switch>
       </Router>

@@ -5,6 +5,8 @@ import { DetailsButton } from "../../components/DetailsButton";
 
 const ProductMainWrapper = styled.div`
 width: 100%;
+height: 40rem;
+background-color: #FAEAD3;
 `
 
 const ProductInformation = styled.div`
