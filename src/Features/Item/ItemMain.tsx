@@ -19,6 +19,9 @@ margin: auto 0;
 grid-template: 1fr 1fr 2fr minmax(4.25rem, 10.85rem) / 1fr 1fr;
 top: 3rem;
 position: relative;
+grid-row: 1;
+grid-column: 2;
+z-index: 2;
 `
 
 const ProductImage = styled.img`
@@ -27,15 +30,19 @@ height: 85%;
 max-width: 52rem;
 width: 85%;
 grid-row: 1 / 3;
+grid-column: 1;
 margin: auto;
 object-fit: cover;
+z-index: 1;
 `
 
 const ProductStatsWrapper = styled.div`
-background-color: #FFF3E1;
-width: 100%;
+width: 75%;
+height: 50%;
+margin: auto 0;
 grid-column: 2;
 grid-row: 2;
+z-index: 1;
 `
 
 const ProductStatsContainer = styled.div`
@@ -90,6 +97,15 @@ grid-row: 4;
 grid-column: 2;
 `
 
+const ColourWrapper = styled.div`
+grid-row: 2;
+grid-column: 1 / 3;
+width: 100%;
+height: 100%;
+z-index: 0;
+background-color: #FFF3E1;
+`
+
 interface props {
     item: item;
 }
@@ -113,6 +129,7 @@ export const ItemMain: React.FC<props> = ({item}) => {
                     <DetailsButton itemId={item.id}/>
                 </DetailContainer>
             </ProductInformation>
+            <ColourWrapper />
             <ProductStatsWrapper>
                 <ProductStatsContainer>
                     <IndividualStat>
