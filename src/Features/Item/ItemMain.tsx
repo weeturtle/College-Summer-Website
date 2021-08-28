@@ -6,41 +6,39 @@ import { DetailsButton } from "../../components/DetailsButton";
 const ProductMainWrapper = styled.div`
 width: 100%;
 height: 40rem;
-background-color: #FAEAD3;
+display: grid;
+grid-template: 30rem 10rem / 1fr 1fr;
+background-color: #FAEAD3
 `
 
 const ProductInformation = styled.div`
-width: 37.5rem;
-height: 22.5rem;
-position: absolute;
-display: inline-block;
-top: 5rem;
-right: 15%;
+width: 65%;
+height: 100%;
+display: grid;
+margin: auto 0;
+grid-template: 1fr 1fr 2fr minmax(4.25rem, 10.85rem) / 1fr 1fr;
+top: 3rem;
+position: relative;
 `
 
 const ProductImage = styled.img`
-height: 35rem;
-position: relative;
-top: 2rem;
-left: 5%;
 z-index: 2;
-display: inline-block;
+height: 85%;
+max-width: 52rem;
+width: 85%;
+grid-row: 1 / 3;
+margin: auto;
+object-fit: cover;
 `
 
 const ProductStatsWrapper = styled.div`
 background-color: #FFF3E1;
-height: 10rem;
 width: 100%;
-position: absolute;
-bottom: 0;
+grid-column: 2;
+grid-row: 2;
 `
 
 const ProductStatsContainer = styled.div`
-width: 35%;
-height: 7.5rem;
-position: absolute;
-right: 11%;
-bottom: 12.5%;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -64,28 +62,32 @@ margin-top: 1rem;
 const ProductTitle = styled.h2`
 font-size: 3.2rem;
 color: #607D47;
+grid-row: 1;
+grid-column: 1 / 3;
 `
 
 const ProductOrigin = styled.h3`
 font-size: 2.5rem;
 color: #535353;
-padding-top: 0.85rem;
+grid-row: 2;
+grid-column: 1;
 `
 
 const ProductDescription = styled.p`
 font-size: 1.5rem;
 color: #535353;
-padding-top: 0.85rem;
+grid-row: 3;
+grid-column: 1 / 3;
 `
 
-const CartSection = styled.div`
-display: flex;
-width: 100%;
-justify-content: space-between;
-align-items: flex-start;
-z-index: 3;
-position: absolute;
-top: 20rem;
+const CartContainer = styled.div`
+grid-row: 4;
+grid-column: 1;
+`
+
+const DetailContainer = styled.div`
+grid-row: 4;
+grid-column: 2;
 `
 
 interface props {
@@ -104,10 +106,12 @@ export const ItemMain: React.FC<props> = ({item}) => {
                 <ProductTitle>{item.name}</ProductTitle>
                 <ProductOrigin>{item.location}</ProductOrigin>
                 <ProductDescription>{item.description}</ProductDescription>
-                <CartSection>
+                <CartContainer>
                     <AddToCartDropDown item={item}/>
+                </CartContainer>
+                <DetailContainer>
                     <DetailsButton itemId={item.id}/>
-                </CartSection>
+                </DetailContainer>
             </ProductInformation>
             <ProductStatsWrapper>
                 <ProductStatsContainer>
