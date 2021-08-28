@@ -34,8 +34,18 @@ const itemsInitialState: {
     status: "pending"
 };
 
+// USE WITHOUT NETLIFY
+//
+// export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
+//     const response = await fetch('/getItems', {
+//         method: "GET"
+//     });
+//     const JSONResponse = await response.json();
+//     return JSONResponse.default.items;
+// })
+
 export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
-    const response = await fetch('/getItems', {
+    const response = await fetch('/.netlify/functions/fetchItemsNetlify', {
         method: "GET"
     });
     const JSONResponse = await response.json();
