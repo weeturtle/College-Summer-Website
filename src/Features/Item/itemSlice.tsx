@@ -47,7 +47,7 @@ const itemsInitialState: {
 // USE WITH NETLIFY
 
 export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
-    const response = await fetch('https://college-summer-website.netlify.app/.netlify/functions/fetchItemsNetlify', {
+    const response = await fetch('https://cofftea.netlify.app/.netlify/functions/fetchItemsNetlify', {
         method: "GET"
     });
     const JSONResponse = await response.json();
