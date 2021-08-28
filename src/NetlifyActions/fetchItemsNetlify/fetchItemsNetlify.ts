@@ -4,8 +4,6 @@ import * as items from '../../mocks/items.json';
 export const handler: Handler = async (event, context) => {
   return {
     statusCode: 200,
-    body: JSON.stringify({
-      items
-    }),
+    body: JSON.stringify(items),
   }
 }
