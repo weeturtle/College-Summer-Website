@@ -23,6 +23,7 @@ const TextContainer = styled.div`
 background: rgba(255, 255, 255, 0.8);
 height: 75%;
 width: 25%;
+min-width: 450px;
 z-index: 2;
 position: relative;
 right: 5rem;
