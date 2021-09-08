@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
                     <Link to={ROUTES.blogsRoute()}>Blog</Link>
                 </NavContainer>
                 <IconsWrapper>
-                    <BasketButton onClick={handleToggleBasket}>
+                    <BasketButton onClick={handleToggleBasket} aria-label="basket">
                         <HeaderIcon icon="akar-icons:shopping-bag" />
                     </BasketButton>
                     <HeaderIcon icon="iconoir:profile-circled" />

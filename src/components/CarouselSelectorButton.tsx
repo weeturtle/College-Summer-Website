@@ -24,5 +24,5 @@ export const SelectorButton: React.FC<props> = ({ value, onClick, selected = fal
         onClick(value);
     }
 
-    return <StyledSelectorButton selected={selected} key={value} onClick={handleClick} />
+    return <StyledSelectorButton selected={selected} key={value} onClick={handleClick} aria-label="Carousel selector" />
 }
