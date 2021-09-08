@@ -1,7 +1,12 @@
 {
   "short_name": "CoffTea",
   "name": "CoffTea Tea and Coffee Shop",
-  "icons": [],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "155x155"
+    }
+  ],
   "start_url": "/home",
   "display": "standalone",
   "theme_color": "#FAEAD3",
