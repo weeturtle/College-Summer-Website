@@ -38,7 +38,7 @@ export const ProductCard: React.FC<props> = ({item, orientation}) => {
     if (orientation === "left") {
         return (
             <ProductWrapper>
-                <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} orientation={orientation} />
+                <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} orientation={orientation} alt="Product" />
                 <InfoWrapper orientation={orientation}>
                     <ProductCardInfo item={item} />
                 </InfoWrapper>

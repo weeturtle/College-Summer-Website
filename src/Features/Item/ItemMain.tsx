@@ -117,7 +117,7 @@ export const ItemMain: React.FC<props> = ({item}) => {
     
     return (
         <ProductMainWrapper>
-            <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} />
+            <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} alt="Product" />
             <ProductInformation>
                 <ProductTitle>{item.name}</ProductTitle>
                 <ProductOrigin>{item.location}</ProductOrigin>
