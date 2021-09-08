@@ -64,7 +64,7 @@ width: 10rem;
 export const AboutPreview: React.FC = () => {
     return (
         <AboutWrapper>
-            <FieldImage src={require('../../assets/About/FarmerInField2.png').default} alt="Woman Farming Coffee" />
+            <FieldImage src={require('../../assets/About/FarmerInField2.webp').default} alt="Woman Farming Coffee" />
             <TextContainer>
                 <Title>Our Suppliers</Title>
                 <Information>
@@ -72,8 +72,8 @@ export const AboutPreview: React.FC = () => {
                 </Information>
             </TextContainer>
             <Links>
-                <Link to={{ pathname: "https://www.fairtrade.org.uk/" }} target="_blank" >
-                    <FairTradeImage src={FairTrade} />
+                <Link to={{ pathname: "https://www.fairtrade.org.uk/" }} target="_blank">
+                    <FairTradeImage src={FairTrade} alt="Fair Trade" />
                 </Link>
                 <ReadMore to={ROUTES.aboutUsRoute()} />
             </Links>
