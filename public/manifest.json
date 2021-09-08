@@ -4,7 +4,7 @@
   "icons": [
     {
       "src": "favicon.svg",
-      "sizes": "155x155"
+      "sizes": "150x150"
     }
   ],
   "start_url": "/home",
