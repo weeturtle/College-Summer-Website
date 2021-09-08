@@ -50,7 +50,7 @@ export const ProductCard: React.FC<props> = ({item, orientation}) => {
                 <InfoWrapper orientation={orientation}>
                     <ProductCardInfo item={item} />
                 </InfoWrapper>
-                <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} orientation={orientation} />
+                <ProductImage src={require(`../../assets/ProductImages/${item.image}`).default} orientation={orientation} alt="Product" />
             </ProductWrapper>
         )
     }
